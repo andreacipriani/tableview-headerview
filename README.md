@@ -5,6 +5,5 @@ The table view frame is not correctly resized unless you set a new reference. As
 
 This project shows the bug and a possible solution.
 
-[images/tableview-header]
-
+![](https://github.com/andreacipriani/tableview-headerview/blob/master/images/tableview-header.png)
 
