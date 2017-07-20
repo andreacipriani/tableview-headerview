@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,13 +25,22 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="vqS-00-sgr">
+                    <rect key="frame" x="177.5" y="179" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
-            <color key="backgroundColor" red="0.92369657754898071" green="0.88092339038848877" blue="0.20320510864257812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="4ws-nG-du0" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2Dg-3m-hW2"/>
                 <constraint firstItem="4ws-nG-du0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GNt-7q-cvt"/>
+                <constraint firstItem="vqS-00-sgr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IfG-n1-AeC"/>
+                <constraint firstItem="vqS-00-sgr" firstAttribute="top" secondItem="4ws-nG-du0" secondAttribute="bottom" constant="39" id="ZHv-AU-BBm"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="activityIndicator" destination="vqS-00-sgr" id="ohB-Je-ae9"/>
+                <outlet property="label" destination="4ws-nG-du0" id="gdD-vg-VLe"/>
+            </connections>
             <point key="canvasLocation" x="24" y="57"/>
         </view>
     </objects>
