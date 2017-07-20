@@ -19,8 +19,9 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         let headerNib = UINib(nibName: "CustomTableViewHeader", bundle: nil)
-        let headerView = headerNib.instantiate(withOwner: self, options: nil).first!
-        tableView.tableHeaderView = (headerView as! UIView)
+        let headerView = headerNib.instantiate(withOwner: self, options: nil).first! as! UIView
+        headerView.frame = CGRect(origin: headerView.frame.origin, size: CGSize(width: headerView.frame.width, height: 400))
+        tableView.tableHeaderView = headerView
     }
 }
 

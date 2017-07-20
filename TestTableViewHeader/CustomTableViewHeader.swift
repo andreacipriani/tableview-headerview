@@ -1,6 +1,6 @@
 import UIKit
 
-final class CustomTableViewHeader: UITableViewHeaderFooterView {
+final class CustomTableViewHeader: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
