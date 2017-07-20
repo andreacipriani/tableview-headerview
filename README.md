@@ -11,9 +11,9 @@ This project shows the bug and a possible solution.
 ![](https://github.com/andreacipriani/tableview-headerview/blob/master/images/tableview-header.png)
 
 ### After updating the frame of tableHeaderView (buggy)
-![](https://github.com/andreacipriani/tableview-headerview/blob/master/images/tableview-header-resized-bugged.png)
+![](https://github.com/andreacipriani/tableview-headerview/blob/master/images/tableview-header-resized-buggy.png)
 
 ### After updating the frame of tableHeaderView (fixed)
 
-![](https://github.com/andreacipriani/tableview-headerview/blob/master/images/tableview-header-resized-fixed.png)
+![](https://github.com/andreacipriani/tableview-headerview/blob/master/images/tableview-header-resized-bug-fixed.png)
 
