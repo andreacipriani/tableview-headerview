@@ -1,8 +1,8 @@
 # Dynamic tableHeaderView bug on iOS 9
 
-There is a bug in iOS 9 that happens when you dynamically change the frame of a `tableHeaderView`.
-When you do that, the table view frame is not correctly resized unless you update the reference of the `tableHeaderView`.
-As you can see in the second screenshot, some cells of table view are covered by the header.
+When you dynamically change the frame of a `tableHeaderView` in iOS 9, the table view is not automatically resized. Because of this bug, the first cells of the table view might not be visible [see second screenshots].
+
+To avoid the bug, when you update the frame of the `tableHeaderView` you also have to update the reference of the table view `tableHeaderView`.
 
 This project shows the bug and a possible solution.
 
