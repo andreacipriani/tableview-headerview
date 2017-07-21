@@ -9,6 +9,8 @@ class ViewController: UIViewController {
     // MARK: - Private properties
 
     fileprivate let customCellIdentifier = "CustomCell"
+    private let tableViewHeaderInitialFrame = CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width, height: 200))
+    private let tableViewHeaderUpdatedFrame = CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width, height: 500))
     fileprivate let headerView: CustomTableViewHeader = UINib(nibName: "CustomTableViewHeader", bundle: nil).instantiate(withOwner: self, options: nil).first! as! CustomTableViewHeader
 
     // MARK: - Lifecycle
@@ -43,7 +45,7 @@ class ViewController: UIViewController {
     }
 
     private func setupTableViewHeaderView() {
-        headerView.frame = CGRect(origin: headerView.frame.origin, size: CGSize(width: headerView.frame.width, height: 200))
+        headerView.frame = tableViewHeaderInitialFrame
         tableView.tableHeaderView = headerView
     }
 
@@ -57,17 +59,13 @@ class ViewController: UIViewController {
 
     // Use this function to see the bug on iOS 9
     private func updateTableViewHeaderFrame() {
-        let oldFrame = tableView.tableHeaderView!.frame
-        let newFrame = CGRect(origin: oldFrame.origin, size: CGSize(width: oldFrame.width, height: 500))
-        tableView.tableHeaderView!.frame = newFrame
+        tableView.tableHeaderView!.frame = tableViewHeaderUpdatedFrame
     }
 
     // Use this function to fix the bug
     private func updateTableViewHeaderWithIOS9BugFix() {
-        let oldFrame = headerView.frame
-        let newFrame = CGRect(origin: oldFrame.origin, size: CGSize(width: oldFrame.width, height: 500))
-        headerView.frame = newFrame
-        tableView.tableHeaderView = headerView // iOS 9 bug: if you don't set the tableHeaderView again, the layout breaks
+        headerView.frame = tableViewHeaderUpdatedFrame
+        tableView.tableHeaderView = headerView
     }
 }
 
