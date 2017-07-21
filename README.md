@@ -8,12 +8,12 @@ This project shows the bug and a possible solution.
 
 ### Before changing the tableHeaderView's frame
 
-![](https://github.com/andreacipriani/tableview-headerview/blob/master/images/tableheaderview.png)
+![](https://github.com/andreacipriani/tableview-headerview/blob/master/images/tableheaderview.png =250x)
 
 ### After updating the tableHeaderView's frame on iOS 9 (buggy)
-![](https://github.com/andreacipriani/tableview-headerview/blob/master/images/tableheaderview-bug.png)
+![](https://github.com/andreacipriani/tableview-headerview/blob/master/images/tableheaderview-bug.png =250x)
 
 ### After updating the tableHeaderView's frame on iOS 9 (fixed)
 
-![](https://github.com/andreacipriani/tableview-headerview/blob/master/images/tableheaderview-bug-fixed.png)
+![](https://github.com/andreacipriani/tableview-headerview/blob/master/images/tableheaderview-bug-fixed.png =250x)
 
